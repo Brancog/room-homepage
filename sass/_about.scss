@@ -1,0 +1,45 @@
+.about {
+  display: grid;
+  grid-template-rows: 33% 1fr 33%;
+  height: 90vh;
+
+  &__furniture-photo {
+    background: url(../images/image-about-dark.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__about-furniture {
+    padding: 3rem 2rem 2rem 2rem;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.25rem;
+  }
+
+  &__text {
+    color: $color-dark-gray;
+    line-height: 1.5;
+    margin-top: 1rem;
+    font-size: clamp(0.75rem, 1.5vw + 0.5rem, 1.25rem);
+  }
+  &__chair-photo {
+    background: url(../images/image-about-light.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (width >= 60em) {
+  .about {
+    height: 45vh;
+    width: 100%;
+    grid-template-rows: none;
+    grid-template-columns: 30% 40% 30%;
+  }
+}

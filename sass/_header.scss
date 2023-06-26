@@ -1,0 +1,140 @@
+.header {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  height: 45rem;
+  width: 100%;
+
+  &__navigation {
+    position: relative;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-image: url(../images/mobile-image-hero-1.jpg);
+    padding: 3rem 0;
+
+    transition: background 0.5s ease;
+    -webkit-transition: background 0.5s ease;
+  }
+
+  .slide-nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      background-color: $color-black;
+      height: 100%;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        height: 1.125rem;
+      }
+      &:hover {
+        background-color: $color-very-dark-gray;
+      }
+    }
+  }
+  .slide-nav--mobile {
+    right: 0;
+    bottom: 0;
+    width: 8rem;
+    height: 4rem;
+  }
+
+  .slide-nav--desktop {
+    display: none;
+    width: 10vw;
+    max-width: 12rem;
+    height: 5rem;
+  }
+
+  &__text-content {
+    position: relative;
+    padding: 2rem 2rem 0 2rem;
+  }
+  &__heading {
+    font-weight: $font-weight-bold;
+    font-size: clamp(2rem, 4vw + 1.25rem, 2.75rem);
+    letter-spacing: -1px;
+    line-height: 1.1;
+  }
+
+  &__text {
+    color: $color-dark-gray;
+    line-height: 1.5;
+    margin-top: 1rem;
+    font-size: clamp(0.75rem, 1.5vw + 0.5rem, 1.25rem);
+  }
+  &__shop-now,
+  &__shop-now:link,
+  &__shop-now:active {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 3rem;
+
+    span {
+      text-transform: uppercase;
+      color: $color-very-dark-gray;
+      letter-spacing: 0.75rem;
+    }
+
+    img {
+      transform: translateY(1px);
+    }
+  }
+  &__shop-now:hover {
+    opacity: 0.5;
+  }
+}
+
+// TABLET
+@media (width >= 48em) {
+  .header {
+    height: 75vh;
+
+    &__navigation {
+      background-position: 10% 70%;
+    }
+  }
+}
+
+// DESKTOP
+@media (width >= 60em) {
+  .header {
+    max-height: 75vh;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: none;
+
+    &__navigation {
+      background-position: center;
+      //   background-image: url("../images/desktop-image-hero-1.jpg");
+    }
+
+    .slide-nav--mobile {
+      display: none;
+    }
+    .slide-nav--desktop {
+      display: flex;
+      left: 0;
+      bottom: 0;
+    }
+
+    &__text-content {
+      padding: 6rem;
+    }
+
+    &__heading {
+      font-weight: $font-weight-semibold;
+    }
+    &__shop-now,
+    &__shop-now:link,
+    &__shop-now:active {
+      margin-top: 2rem;
+    }
+  }
+}
