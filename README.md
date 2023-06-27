@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/mobile-first-responsive-design-using-css-grid-GF572EQC7v
+- Live Site URL: https://brancog.github.io/room-homepage/
 
 ## My process
 
